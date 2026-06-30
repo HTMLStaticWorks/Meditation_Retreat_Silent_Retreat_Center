@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | StillMind Silent Retreat Center</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="StillMind Logo" class="me-2" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="dashboard.html" class="btn btn-primary-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn"
+                        title="Participant Dashboard">
+                        <i class="bi bi-grid-fill"></i>
+                    </a>
+                    <a href="login.html" class="btn btn-outline-custom btn-sm d-flex align-items-center" title="Login">
+                        Login
+                    </a>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                            RTL
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="py-5 mt-5" data-reveal="blur-in">
+        <div class="container pt-5 text-center">
+            <h1 class="display-3 fw-bold mb-4">Let's <br> <span class="text-gradient">Connect</span></h1>
+            <p class="text-secondary lead max-w-600 mx-auto mb-5 px-3">Have a question about our silent retreats, lodging options, or daily schedules? Our sanctuary team is here to assist.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-5" data-reveal="fade-up">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h2 class="h2 mb-4">Get In Touch</h2>
+
+                    <div class="glass-card p-4 mb-4 d-flex align-items-center">
+                        <div class="bg-primary-accent rounded-circle p-3 me-4 text-dark"><i
+                                class="bi bi-envelope-fill fs-4"></i></div>
+                        <div>
+                            <h4 class="h6 text-secondary mb-1">Email Support</h4>
+                            <p class="mb-0 fw-bold">hello@stillmindretreats.org</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-4 mb-4 d-flex align-items-center">
+                        <div class="bg-primary-accent rounded-circle p-3 me-4 text-dark"><i
+                                class="bi bi-geo-alt-fill fs-4"></i></div>
+                        <div>
+                            <h4 class="h6 text-secondary mb-1">Our Sanctuary HQ</h4>
+                            <p class="mb-0 fw-bold">Redwood Valley Reserve, Mendocino, CA</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <h5 class="mb-4">Follow Our Updates</h5>
+                        <div class="d-flex gap-3 fs-3 social-links mb-4">
+                            <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=600" 
+                             class="img-fluid rounded-4 border border-color shadow-lg" alt="Redwood Valley Reserve" style="max-height: 200px; width: 100%; object-fit: cover;">
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="glass-card p-5">
+                        <h3 class="h4 mb-4">Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Full Name</label>
+                                    <input type="text"
+                                        class="form-control bg-transparent border-color text-white shadow-none p-3"
+                                        placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Email Address</label>
+                                    <input type="email"
+                                        class="form-control bg-transparent border-color text-white shadow-none p-3"
+                                        placeholder="john@company.com">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label text-secondary text-sm">Subject</label>
+                                <select class="form-select bg-transparent border-color text-secondary shadow-none p-3">
+                                    <option>General Inquiry</option>
+                                    <option>Retreat Booking</option>
+                                    <option>Scholarship Application</option>
+                                    <option>Guest Services Help</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label text-secondary text-sm">Message</label>
+                                <textarea class="form-control bg-transparent border-color text-white shadow-none p-3"
+                                    rows="5" placeholder="How can we support your practice?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100 py-3">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5" data-reveal="scale-up">
+        <div class="container py-5">
+            <div class="glass-card p-2 overflow-hidden shadow-lg border-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d-122.39998468468245!3d37.77492927975922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807bed8f559a%3A0x4bb570dcf454c698!2sDesign%20District%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1689123456789!5m2!1sen!2sus"
+                    width="100%" height="450"
+                    style="border:0; border-radius: 12px; filter: grayscale(1) invert(1) contrast(1.2) opacity(0.8);"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5 border-top border-color">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="StillMind Logo" height="35" class="me-2">
+                    </a>
+                    <p class="text-secondary">A premium sanctuary for silence, meditation, and deep mental rejuvenation.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4 social-links">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Explore</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="teachers.html" class="text-decoration-none text-secondary">Our Guides</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">The Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Main Links</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">About</a></li>
+                        <li class="mb-2"><a href="teachers.html" class="text-decoration-none text-secondary">Teachers</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Stay Updated</h5>
+                    <div class="glass-card p-2 d-flex">
+                        <input type="email" class="form-control bg-transparent border-0 text-white shadow-none"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary-custom ms-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-5 text-secondary border-top border-color">
+                <p>&copy; 2026 StillMind Retreats. All rights reserved. Built with Premium Zen Aesthetic.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

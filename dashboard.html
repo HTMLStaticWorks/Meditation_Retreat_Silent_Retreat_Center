@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | StillMind Retreat Center</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            #overview-section .overview-metric-card {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            #overview-section .overview-metric-label {
+                min-height: 48px;
+            }
+
+            #overview-section .overview-metric-change {
+                min-height: 48px;
+            }
+
+            #campaigns-section .campaign-stage-card {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            #campaigns-section .campaign-stage-body {
+                min-height: 140px;
+            }
+
+            #campaigns-section .campaign-stage-body .h5 {
+                min-height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0.5rem;
+            }
+
+            #campaigns-section .campaign-stage-body p {
+                min-height: 24px;
+                margin-bottom: 0;
+            }
+
+            #campaigns-section .campaign-stage-footer {
+                margin-top: auto;
+            }
+
+            #integrations-section .integration-app-card {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            #integrations-section .integration-app-title {
+                min-height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #integrations-section .integration-app-copy {
+                min-height: 56px;
+            }
+
+            #integrations-section .integration-app-action {
+                margin-top: auto;
+            }
+        }
+
+        #theme-toggle, #rtl-toggle {
+            padding: 6px 12px !important;
+            font-size: 0.8rem !important;
+            border-radius: 8px !important;
+            height: auto !important;
+            min-height: auto !important;
+            width: auto !important;
+        }
+    </style>
+</head>
+
+<body class="bg-primary-bg">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="mb-5 d-flex align-items-center text-decoration-none">
+            <img src="assets/images/logo.svg" alt="Logo" height="35">
+        </a>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="sidebar-link active" onclick="showSection('overview')">
+                <i class="bi bi-grid-fill"></i> Overview
+            </a>
+            <a href="#" class="sidebar-link" onclick="showSection('campaigns')">
+                <i class="bi bi-calendar-check"></i> My Retreats
+            </a>
+            <a href="#" class="sidebar-link" onclick="showSection('analytics')">
+                <i class="bi bi-graph-up"></i> Meditation Progress
+            </a>
+            <a href="#" class="sidebar-link" onclick="showSection('integrations')">
+                <i class="bi bi-download"></i> Retreat Resources
+            </a>
+            <hr class="border-color my-4">
+            <a href="#" class="sidebar-link" onclick="showSection('customers')">
+                <i class="bi bi-chat-dots"></i> Teacher Connect
+            </a>
+            <a href="#" class="sidebar-link" onclick="showSection('settings')">
+                <i class="bi bi-gear"></i> Settings
+            </a>
+            <a href="login.html" class="sidebar-link text-danger mt-4">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="d-flex justify-content-between align-items-center mb-5">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-link text-white d-lg-none p-0 me-3" id="sidebar-toggle">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
+                <h1 class="h3 mb-0">Dashboard</h1>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex gap-2 ms-2">
+                    <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                        RTL
+                    </button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150"
+                    class="rounded-circle" width="40" height="40" style="object-fit: cover;" alt="Avatar">
+            </div>
+        </header>
+
+        <div id="overview-section" class="content-section">
+            <!-- Stats Grid -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <div class="dashboard-card overview-metric-card">
+                        <div class="stat-icon"
+                            style="background: rgba(47, 93, 80, 0.1); color: var(--primary-accent);">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <p class="text-secondary text-sm mb-1 overview-metric-label">Mindful Minutes</p>
+                        <h3 class="mb-0">1,240 mins</h3>
+                        <p class="text-success text-sm mb-0 mt-2 overview-metric-change"><i class="bi bi-arrow-up"></i> 12.5% this week</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dashboard-card overview-metric-card">
+                        <div class="stat-icon"
+                            style="background: rgba(220, 199, 161, 0.1); color: var(--secondary-accent);">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <p class="text-secondary text-sm mb-1 overview-metric-label">Days Maintained</p>
+                        <h3 class="mb-0">24 days</h3>
+                        <p class="text-success text-sm mb-0 mt-2 overview-metric-change"><i class="bi bi-arrow-up"></i> 92% consistency</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dashboard-card overview-metric-card">
+                        <div class="stat-icon" style="background: rgba(122, 168, 116, 0.1); color: var(--success);">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <p class="text-secondary text-sm mb-1 overview-metric-label">Avg Heart Rate</p>
+                        <h3 class="mb-0">64 bpm</h3>
+                        <p class="text-success text-sm mb-0 mt-2 overview-metric-change"><i class="bi bi-arrow-down"></i> -4% vs last month</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dashboard-card overview-metric-card">
+                        <div class="stat-icon" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">
+                            <i class="bi bi-house-heart"></i>
+                        </div>
+                        <p class="text-secondary text-sm mb-1 overview-metric-label">Retreat Bookings</p>
+                        <h3 class="mb-0">2 active</h3>
+                        <p class="text-secondary text-sm mb-0 mt-2 overview-metric-change">Next: Summer Solstice Sit</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-8">
+                    <div class="dashboard-card">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="h5 mb-0">Daily Sitting Minutes</h4>
+                            <select
+                                class="form-select bg-transparent border-color text-sm text-secondary w-auto shadow-none">
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                            </select>
+                        </div>
+                        <div style="height: 300px; position: relative; width: 100%;">
+                            <canvas id="engagementChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="dashboard-card">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="h5 mb-0">Practice Allocation</h4>
+                        </div>
+                        <div style="height: 300px; position: relative; width: 100%;">
+                            <canvas id="deviceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Campaigns Table -->
+            <div class="dashboard-card">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="h5 mb-0">Recent Retreat Stays</h4>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-dark table-glass mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-secondary border-0">Retreat Stay</th>
+                                <th class="text-secondary border-0">Duration</th>
+                                <th class="text-secondary border-0">Noble Silence</th>
+                                <th class="text-secondary border-0">Status</th>
+                                <th class="text-secondary border-0">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-secondary rounded p-2 me-3">
+                                            <i class="bi bi-flower1 fs-5 text-primary-accent"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold">Vipassana Silent Retreat</div>
+                                            <div class="text-secondary text-sm">Forest Sanctuary / Cabin 4</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>7 Days</td>
+                                <td>Yes (Noble Silence)</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td><button class="btn btn-link text-primary-accent p-0"><i
+                                            class="bi bi-three-dots"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-secondary rounded p-2 me-3">
+                                            <i class="bi bi-sun fs-5 text-primary-accent"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold">Mindfulness & Yoga Weekend</div>
+                                            <div class="text-secondary text-sm">Garden Valley / Room 12</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>3 Days</td>
+                                <td>Partial</td>
+                                <td><span class="status-badge status-active">Upcoming</span></td>
+                                <td><button class="btn btn-link text-primary-accent p-0"><i
+                                            class="bi bi-three-dots"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-secondary rounded p-2 me-3">
+                                            <i class="bi bi-tree fs-5 text-primary-accent"></i>
+                                        </div>
+                                        <div>
+                                            <div class="fw-bold">Nature Detoxing Hermitage</div>
+                                            <div class="text-secondary text-sm">Self-Guided / Hermitage A</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>10 Days</td>
+                                <td>Self-Directed</td>
+                                <td><span class="status-badge status-paused">Cancelled</span></td>
+                                <td><button class="btn btn-link text-primary-accent p-0"><i
+                                            class="bi bi-three-dots"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="campaigns-section" class="content-section d-none">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="h3 mb-0">My Retreat Bookings</h2>
+                <a href="contact.html" class="btn btn-primary-custom">
+                    <i class="bi bi-plus-lg me-2"></i> Apply for Retreat
+                </a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="dashboard-card campaign-stage-card">
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="status-badge status-active">Upcoming</span>
+                            <i class="bi bi-three-dots-vertical text-secondary"></i>
+                        </div>
+                        <div class="text-center mb-4 campaign-stage-body">
+                            <div class="glass-card d-inline-block p-3 mb-3">
+                                <i class="bi bi-calendar-heart fs-1 text-gradient"></i>
+                            </div>
+                            <h4 class="h5">Summer Solstice Silent Sit</h4>
+                            <p class="text-secondary text-sm">Starts in 15 days</p>
+                        </div>
+                        <div class="border-top border-color pt-3 mt-4 d-flex justify-content-between campaign-stage-footer">
+                            <span class="text-secondary text-sm">Duration:</span>
+                            <span class="fw-bold">7 Days</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dashboard-card campaign-stage-card">
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="status-badge status-active">Active</span>
+                            <i class="bi bi-three-dots-vertical text-secondary"></i>
+                        </div>
+                        <div class="text-center mb-4 campaign-stage-body">
+                            <div class="glass-card d-inline-block p-3 mb-3">
+                                <i class="bi bi-snow fs-1 text-gradient"></i>
+                            </div>
+                            <h4 class="h5">Winter Renewal Yoga</h4>
+                            <p class="text-secondary text-sm">Starts in 6 months</p>
+                        </div>
+                        <div class="border-top border-color pt-3 mt-4 d-flex justify-content-between campaign-stage-footer">
+                            <span class="text-secondary text-sm">Duration:</span>
+                            <span class="fw-bold">3 Days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="analytics-section" class="content-section d-none">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-12">
+                    <div class="dashboard-card">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4 class="h5 mb-0">Meditation Streak & Consistency</h4>
+                            <span class="badge status-active p-2">Active Streak: 12 Days</span>
+                        </div>
+                        <div class="bg-secondary-bg rounded-4 d-flex align-items-center justify-content-center"
+                            style="height: 400px; border: 1px solid var(--border-color);">
+                            <div class="text-center">
+                                <i class="bi bi-calendar3 fs-1 text-gradient mb-3 d-block"></i>
+                                <p class="text-secondary">Interactive Meditation Log Calendar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="dashboard-card">
+                        <h4 class="h5 mb-4">Weekly Practice Focus</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li
+                                class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-color">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="fw-bold">Breath Awareness (Anapanasati)</div>
+                                        <div class="text-secondary text-sm">Focused attention sits</div>
+                                    </div>
+                                </div>
+                                <div class="text-end fw-bold">18 Hours</div>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <div class="fw-bold">Body Scan (Somatic Mindfulness)</div>
+                                        <div class="text-secondary text-sm">Physical relaxation sits</div>
+                                    </div>
+                                </div>
+                                <div class="text-end fw-bold">12 Hours</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dashboard-card">
+                        <h4 class="h5 mb-4">State of Mind Analytics</h4>
+                        <div class="p-5 text-center">
+                            <i class="bi bi-pie-chart fs-1 text-secondary mb-3 d-block"></i>
+                            <p class="text-secondary">Distribution of Calm, Equanimity, & Joy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="integrations-section" class="content-section d-none">
+            <h2 class="h3 mb-5">Retreat Preparation Downloads</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="dashboard-card text-center integration-app-card">
+                        <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-file-earmark-pdf text-danger fs-1"></i>
+                        </div>
+                        <h3 class="h5 mb-3 integration-app-title">Retreat Checklist</h3>
+                        <p class="text-secondary text-sm mb-4 integration-app-copy">What to pack, what to leave at home, and full daily schedules.</p>
+                        <button class="btn btn-outline-custom btn-sm w-100 integration-app-action">Download PDF</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card text-center integration-app-card">
+                        <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-music-note-beamed text-success fs-1"></i>
+                        </div>
+                        <h3 class="h5 mb-3 integration-app-title">Pre-Retreat Sit Guide</h3>
+                        <p class="text-secondary text-sm mb-4 integration-app-copy">A 20-minute guided preparation sit audio by Acharya Shanti.</p>
+                        <button class="btn btn-outline-custom btn-sm w-100 integration-app-action">Download MP3</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card text-center integration-app-card">
+                        <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-book text-warning fs-1"></i>
+                        </div>
+                        <h3 class="h5 mb-3 integration-app-title">Noble Silence Guide</h3>
+                        <p class="text-secondary text-sm mb-4 integration-app-copy">Essential reading on the history and benefits of noble silence.</p>
+                        <button class="btn btn-outline-custom btn-sm w-100 integration-app-action">Download PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="customers-section" class="content-section d-none">
+            <h2 class="h3 mb-5">Teacher Message Center</h2>
+            <div class="dashboard-card">
+                <div class="table-responsive">
+                    <table class="table table-dark table-glass mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-secondary border-0">Teacher</th>
+                                <th class="text-secondary border-0">Focus Area</th>
+                                <th class="text-secondary border-0">Last Message Date</th>
+                                <th class="text-secondary border-0">Message Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="fw-bold">Acharya Shanti</div>
+                                    <div class="text-secondary text-xs">shanti@stillmindretreats.org</div>
+                                </td>
+                                <td>Vipassana advice & posture correction</td>
+                                <td>Today, 10:45 AM</td>
+                                <td><span class="text-primary-accent">Read</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="fw-bold">Elena Rostova</div>
+                                    <div class="text-secondary text-xs">elena@stillmindretreats.org</div>
+                                </td>
+                                <td>Yin yoga stretch recommendations</td>
+                                <td>Yesterday, 4:20 PM</td>
+                                <td><span class="text-primary-accent">Unread</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-section" class="content-section d-none">
+            <h2 class="h3 mb-5">Account Settings</h2>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="dashboard-card">
+                        <h4 class="h5 mb-4 border-bottom border-color pb-3">Profile Information</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Full Name</label>
+                                    <input type="text"
+                                        class="form-control bg-transparent border-color text-white shadow-none"
+                                        value="StillMind Practitioner">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Email Address</label>
+                                    <input type="email"
+                                        class="form-control bg-transparent border-color text-white shadow-none"
+                                        value="practitioner@stillmind.org">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Dietary Preferences</label>
+                                    <input type="text"
+                                        class="form-control bg-transparent border-color text-white shadow-none"
+                                        value="Vegan">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary text-sm">Meditation Experience</label>
+                                    <input type="text"
+                                        class="form-control bg-transparent border-color text-white shadow-none"
+                                        value="Intermediate (1-3 years)">
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary-custom px-5">Save Changes</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="dashboard-card">
+                        <h4 class="h5 mb-4 border-bottom border-color pb-3">Retreat Application Status</h4>
+                        <div class="badge bg-primary-accent text-white mb-3">Application Approved</div>
+                        <p class="text-white fw-bold mb-1">7-Day Summer Silent Sit</p>
+                        <p class="text-secondary text-sm mb-4">Mendocino Forest Sanctuary</p>
+                        <button class="btn btn-outline-custom btn-sm w-100">Lodging Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

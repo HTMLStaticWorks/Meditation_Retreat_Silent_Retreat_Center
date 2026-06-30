@@ -1,0 +1,185 @@
+/* Light Mode Overrides for StillMind Retreats Platform */
+
+body.light-theme {
+    --primary-bg: #F8F6F2;
+    --secondary-bg: #F2EEE8;
+    --card-bg: #ffffff;
+    --text-primary: #2A2A2A;
+    --text-secondary: #5A5A5A;
+    --border-color: #D9D9D9;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+}
+
+/* Navbar Light Theme */
+body.light-theme .navbar-custom {
+    background: rgba(248, 246, 242, 0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #D9D9D9;
+}
+
+body.light-theme .nav-link {
+    color: #2A2A2A !important;
+}
+
+body.light-theme .nav-link:hover,
+body.light-theme .nav-link.active {
+    color: var(--primary-accent) !important;
+}
+
+body.light-theme .navbar-brand .text-white {
+    color: #2A2A2A !important;
+}
+
+/* Sections & Typography */
+body.light-theme .bg-secondary-bg {
+    background-color: #F2EEE8 !important;
+}
+
+body.light-theme .text-secondary {
+    color: #5A5A5A !important;
+}
+
+body.light-theme .text-white {
+    color: #2A2A2A !important;
+}
+
+body.light-theme .display-3,
+body.light-theme .display-5,
+body.light-theme .h1,
+body.light-theme .h2,
+body.light-theme .h3,
+body.light-theme .h4,
+body.light-theme .h5 {
+    color: #2A2A2A !important;
+}
+
+body.light-theme .hero-ai-enhanced-badge {
+    background-color: var(--primary-accent) !important;
+    color: #ffffff !important;
+}
+
+/* Cards & Dashboard Elements */
+body.light-theme .glass-card {
+    background: #ffffff;
+    border-color: #D9D9D9;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+}
+
+body.light-theme .glass-card:hover {
+    border-color: var(--secondary-accent);
+}
+
+body.light-theme .dashboard-card {
+    background: #ffffff;
+    border-color: #D9D9D9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+}
+
+body.light-theme .sidebar {
+    background: #F2EEE8;
+    border-right: 1px solid #D9D9D9;
+}
+
+body.light-theme .sidebar-link {
+    color: #2A2A2A;
+}
+
+body.light-theme .sidebar-link:hover,
+body.light-theme .sidebar-link.active {
+    background: rgba(47, 93, 80, 0.05);
+    color: var(--primary-accent);
+}
+
+/* Tables */
+body.light-theme .table-dark {
+    --bs-table-bg: transparent;
+    color: #2A2A2A;
+}
+
+body.light-theme .table-glass tr td,
+body.light-theme .table-glass tr th {
+    background: #ffffff;
+    color: #2A2A2A;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+body.light-theme .table-glass th.text-secondary {
+    color: #5A5A5A !important;
+}
+
+/* Form Controls */
+body.light-theme .form-control,
+body.light-theme .form-select {
+    border-color: #D9D9D9;
+    color: #2A2A2A !important;
+    background-color: #ffffff !important;
+}
+
+body.light-theme .form-control::placeholder {
+    color: #999999;
+}
+
+body.light-theme .input-group-text {
+    border-color: #D9D9D9;
+    color: #2A2A2A;
+    background-color: #F2EEE8;
+}
+
+/* Auth Pages Specific */
+body.light-theme .auth-image {
+    filter: grayscale(0.1) brightness(1.05);
+}
+
+/* Footer */
+body.light-theme footer {
+    border-top: 1px solid #D9D9D9;
+    background-color: #F2EEE8;
+}
+
+body.light-theme footer .text-secondary {
+    color: #5A5A5A !important;
+}
+
+body.light-theme footer a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+body.light-theme footer a:hover {
+    color: var(--primary-accent) !important;
+}
+
+body.light-theme footer .social-links a:hover {
+    transform: translateY(-5px);
+}
+
+body.light-theme .border-color {
+    border-color: #D9D9D9 !important;
+}
+
+/* Navbar Toggler Fix */
+body.light-theme .navbar-toggler,
+body.light-theme .navbar-toggler i {
+    color: #2A2A2A !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Mobile/Tablet Menu Fix */
+@media (max-width: 1199.98px) {
+    body.light-theme .navbar-custom .navbar-collapse {
+        background: rgba(248, 246, 242, 0.98);
+        border-color: #D9D9D9;
+    }
+}
+
+/* Buttons */
+body.light-theme .btn-outline-custom {
+    color: #2A2A2A;
+    border-color: #D9D9D9;
+}
+
+body.light-theme .btn-outline-custom:hover {
+    background: #F2EEE8;
+}

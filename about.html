@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | StillMind Retreat Center</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="StillMind Logo" class="me-2" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="dashboard.html" class="btn btn-primary-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn"
+                        title="Participant Dashboard">
+                        <i class="bi bi-grid-fill"></i>
+                    </a>
+                    <a href="login.html" class="btn btn-outline-custom btn-sm d-flex align-items-center" title="Login">
+                        Login
+                    </a>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                            RTL
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <section class="py-5 mt-5 position-relative overflow-hidden" data-reveal="blur-in">
+        <div class="position-absolute hero-glow" style="top: -50%; left: 50%; transform: translateX(-50%); width: 600px; height: 300px; opacity: 0.15; filter: blur(120px);"></div>
+        <div class="container pt-5 text-center position-relative z-1">
+            <span class="badge bg-primary-accent text-dark mb-3 px-3 py-2 text-xs uppercase letter-spacing-1" style="font-weight: 500;">Sanctuary</span>
+            <h1 class="display-3 fw-bold mb-4">Serene Sanctuary <br> <span class="text-gradient">For The Mind</span></h1>
+            <p class="text-secondary lead max-w-600 mx-auto px-3">We provide a peaceful environment where you can step away from daily life, establish stillness, and learn deep mindfulness techniques.</p>
+        </div>
+    </section>
+
+    <!-- Service Sections -->
+    <section class="py-5" data-reveal="fade-up">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Section 1: Our Serene Setting -->
+                <div class="col-lg-6">
+                    <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=600" class="w-100" style="height: 180px; object-fit: cover;" alt="Our Serene Setting">
+                        <div class="p-4 d-flex gap-3 align-items-start flex-grow-1">
+                            <div class="bg-primary-bg p-3 rounded-3 border border-color flex-shrink-0">
+                                <i class="bi bi-tree text-primary-accent fs-2"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-2">Our Serene Setting</h3>
+                                <p class="text-secondary mb-0">Located deep within a protected forest reserve, StillMind center is surrounded by centuries-old pine trees, quiet walking trails, and a crystal-clear mountain stream.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: The Main Meditation Hall -->
+                <div class="col-lg-6">
+                    <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=600" class="w-100" style="height: 180px; object-fit: cover;" alt="Main Meditation Hall">
+                        <div class="p-4 d-flex gap-3 align-items-start flex-grow-1">
+                            <div class="bg-primary-bg p-3 rounded-3 border border-color flex-shrink-0">
+                                <i class="bi bi-building text-primary-accent fs-2"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-2">The Main Meditation Hall</h3>
+                                <p class="text-secondary mb-0">Constructed from natural cedar wood with large glass windows overlooking the valley. Features comfortable tatami mats, ergonomic cushions, and perfect acoustics for silence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Comfortable Lodging -->
+                <div class="col-lg-6">
+                    <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=600" class="w-100" style="height: 180px; object-fit: cover;" alt="Comfortable Lodging">
+                        <div class="p-4 d-flex gap-3 align-items-start flex-grow-1">
+                            <div class="bg-primary-bg p-3 rounded-3 border border-color flex-shrink-0">
+                                <i class="bi bi-house text-primary-accent fs-2"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-2">Comfortable Lodging</h3>
+                                <p class="text-secondary mb-0">Choose between private forest cabins, garden suites, or shared cottages. All spaces feature minimal Zen decor, comfortable bedding, and natural heating.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Organic Nutrition -->
+                <div class="col-lg-6">
+                    <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=600" class="w-100" style="height: 180px; object-fit: cover;" alt="Organic Nutrition">
+                        <div class="p-4 d-flex gap-3 align-items-start flex-grow-1">
+                            <div class="bg-primary-bg p-3 rounded-3 border border-color flex-shrink-0">
+                                <i class="bi bi-flower1 text-primary-accent fs-2"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 mb-2">Organic Nutrition</h3>
+                                <p class="text-secondary mb-0">Enjoy three healthy, organic, plant-based meals prepared daily by our wellness chefs. All ingredients are sourced from our organic garden or local sustainable farms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Dedicated to Stillness -->
+    <section class="py-5 border-top border-color" data-reveal="slide-left">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="bg-primary-bg p-3 rounded-3 border border-color d-inline-block mb-4">
+                        <i class="bi bi-shield-check text-primary-accent fs-3"></i>
+                    </div>
+                    <h3 class="display-6 fw-bold mb-4">Dedicated to Stillness</h3>
+                    <p class="text-secondary lead">StillMind Retreats was founded with the single mission of providing a space for silent contemplation. We believe that in absolute silence, the mind naturally settles and heals itself.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="glass-card p-2">
+                            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800"
+                                class="img-fluid rounded-4" alt="Quiet contemplation">
+                        </div>
+                        <div class="position-absolute glass-card p-3 shadow-lg float-animation d-none d-sm-block" style="bottom: -20px; right: -20px; max-width: 220px; border: 1px solid var(--border-color);">
+                            <p class="mb-0 fw-semibold text-white small"><i class="bi bi-calendar-check text-primary-accent me-2"></i>Year-Round Retreats</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Environmentally Conscious -->
+    <section class="py-5 bg-secondary-bg" data-reveal="slide-right">
+        <div class="container py-5">
+            <div class="row align-items-center g-5 flex-lg-row-reverse">
+                <div class="col-lg-6">
+                    <div class="bg-primary-bg p-3 rounded-3 border border-color d-inline-block mb-4">
+                        <i class="bi bi-tree-fill text-primary-accent fs-3"></i>
+                    </div>
+                    <h3 class="display-6 fw-bold mb-4">Environmentally Conscious</h3>
+                    <p class="text-secondary lead">We run on solar energy, compost all organic waste, and use sustainable forest products. We honor and protect the land that holds our sanctuary.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="glass-card p-2">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800"
+                                class="img-fluid rounded-4" alt="Green sanctuary">
+                        </div>
+                        <div class="position-absolute glass-card p-3 shadow-lg float-animation d-none d-sm-block" style="top: -20px; left: -20px; max-width: 220px; border: 1px solid var(--border-color);">
+                            <p class="mb-0 fw-semibold text-white small"><i class="bi bi-sun text-primary-accent me-2"></i>100% Solar Powered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Experienced Management -->
+    <section class="py-5" data-reveal="scale-up">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="bg-primary-bg p-3 rounded-3 border border-color d-inline-block mb-4">
+                        <i class="bi bi-chat-heart text-primary-accent fs-3"></i>
+                    </div>
+                    <h3 class="display-6 fw-bold mb-4">Experienced Management</h3>
+                    <p class="text-secondary lead">Our team of hosts, chefs, and groundkeepers are all experienced meditators themselves. We hold a warm, gentle presence to support you during your stay.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="glass-card p-2">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
+                                class="img-fluid rounded-4" alt="Support team">
+                        </div>
+                        <div class="position-absolute glass-card p-3 shadow-lg float-animation d-none d-sm-block" style="bottom: -20px; right: -20px; max-width: 220px; border: 1px solid var(--border-color);">
+                            <p class="mb-0 fw-semibold text-white small"><i class="bi bi-heart text-primary-accent me-2"></i>Mindful Community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrated Ecosystem Section -->
+    <section class="py-5 bg-secondary-bg" data-reveal="fade-up">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 mb-4">Sanctuary for <br> <span class="text-gradient">Inner Reconnection</span></h2>
+                    <p class="text-secondary mb-5">We support your return to simplicity and truth, providing the infrastructure and guidance to discover clarity that stays with you long after you leave.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 d-flex align-items-center gap-3 border border-color">
+                                <div class="bg-primary-bg p-2 rounded-3 border border-color">
+                                    <i class="bi bi-flower1 text-primary-accent fs-4"></i>
+                                </div>
+                                <span class="fw-bold small text-white">Guided Instruction</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="glass-card p-3 d-flex align-items-center gap-3 border border-color">
+                                <div class="bg-primary-bg p-2 rounded-3 border border-color">
+                                    <i class="bi bi-arrow-repeat text-primary-accent fs-4"></i>
+                                </div>
+                                <span class="fw-bold small text-white">Consistent Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="position-absolute hero-glow" style="bottom: -10%; right: -10%; width: 250px; height: 250px; opacity: 0.15; filter: blur(60px);"></div>
+                        <div class="glass-card p-2 position-relative z-1">
+                            <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&q=80&w=800"
+                                class="img-fluid rounded-4 shadow-lg" alt="Inner connection">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5 border-top border-color">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="StillMind Logo" height="35" class="me-2">
+                    </a>
+                    <p class="text-secondary">A premium sanctuary for silence, meditation, and deep mental rejuvenation.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4 social-links">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Explore</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="teachers.html" class="text-decoration-none text-secondary">Our Guides</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">The Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Main Links</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">About</a></li>
+                        <li class="mb-2"><a href="teachers.html" class="text-decoration-none text-secondary">Teachers</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Stay Updated</h5>
+                    <div class="glass-card p-2 d-flex">
+                        <input type="email" class="form-control bg-transparent border-0 text-white shadow-none"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary-custom ms-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-5 text-secondary border-top border-color">
+                <p>&copy; 2026 StillMind Retreats. All rights reserved. Built with Premium Zen Aesthetic.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

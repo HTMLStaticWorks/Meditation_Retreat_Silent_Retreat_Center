@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StillMind Journal | Meditation & Silent Retreat Insights</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        .blog-card-img {
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+    </style>
+</head>
+
+<body class="bg-primary-bg">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="StillMind Logo" class="me-2" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="dashboard.html" class="btn btn-primary-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn"
+                        title="Participant Dashboard">
+                        <i class="bi bi-grid-fill"></i>
+                    </a>
+                    <a href="login.html" class="btn btn-outline-custom btn-sm d-flex align-items-center" title="Login">
+                        Login
+                    </a>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                            RTL
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <header class="py-5 mt-5" data-reveal="blur-in">
+        <div class="container pt-5 text-center">
+            <h1 class="display-3 fw-bold mb-4">StillMind <br> <span class="text-gradient">Journal & Insights</span></h1>
+            <p class="text-secondary lead max-w-600 mx-auto px-3">Stay connected to the path. Explore articles on Vipassana meditation, noble silence practice, and tips for bringing mindfulness into your daily routine.</p>
+        </div>
+    </header>
+
+    <!-- Popular Topics Section -->
+    <section class="py-4 border-bottom border-color" data-reveal="fade-up">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center gap-3">
+                <span class="text-secondary small fw-semibold me-2 uppercase letter-spacing-1" style="font-size: 0.75rem;">Explore Topics:</span>
+                <a href="#" class="glass-card px-4 py-2 text-decoration-none d-flex align-items-center gap-2 border border-color hover-lift transition-all">
+                    <i class="bi bi-flower1 text-primary-accent"></i>
+                    <span class="text-white small fw-medium">Silent Retreats</span>
+                    <span class="badge bg-primary-bg text-secondary border border-color rounded-pill ms-2 text-xs">12</span>
+                </a>
+                <a href="#" class="glass-card px-4 py-2 text-decoration-none d-flex align-items-center gap-2 border border-color hover-lift transition-all">
+                    <i class="bi bi-lungs text-primary-accent"></i>
+                    <span class="text-white small fw-medium">Mindfulness</span>
+                    <span class="badge bg-primary-bg text-secondary border border-color rounded-pill ms-2 text-xs">8</span>
+                </a>
+                <a href="#" class="glass-card px-4 py-2 text-decoration-none d-flex align-items-center gap-2 border border-color hover-lift transition-all">
+                    <i class="bi bi-apple text-primary-accent"></i>
+                    <span class="text-white small fw-medium">Zen Nutrition</span>
+                    <span class="badge bg-primary-bg text-secondary border border-color rounded-pill ms-2 text-xs">6</span>
+                </a>
+                <a href="#" class="glass-card px-4 py-2 text-decoration-none d-flex align-items-center gap-2 border border-color hover-lift transition-all">
+                    <i class="bi bi-activity text-primary-accent"></i>
+                    <span class="text-white small fw-medium">Yoga & Somatics</span>
+                    <span class="badge bg-primary-bg text-secondary border border-color rounded-pill ms-2 text-xs">9</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-5" data-reveal="scale-up">
+        <div class="container">
+            <div class="glass-card p-0 overflow-hidden mb-5">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-7">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=1200"
+                            class="img-fluid w-100" style="height: 400px; object-fit: cover;" alt="Featured Post">
+                    </div>
+                    <div class="col-lg-5 p-5">
+                        <span class="badge bg-primary-accent text-white mb-3">FEATURED GUIDE</span>
+                        <h2 class="h1 mb-4">The Art of Noble Silence: A Beginner's Guide</h2>
+                        <p class="text-secondary mb-5">Learn what to expect during your first silent retreat and how to navigate the internal dialogue with compassion and awareness.</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150"
+                                class="rounded-circle me-3" width="40" height="40" style="object-fit: cover;" alt="Acharya Shanti">
+                            <div>
+                                <h6 class="mb-0">Acharya Shanti</h6>
+                                <p class="text-secondary text-xs mb-0">12 min read</p>
+                            </div>
+                            <a href="#" class="btn btn-outline-custom p-2 px-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Grid -->
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-4">
+                    <div class="glass-card p-0 h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800"
+                            class="blog-card-img w-100" alt="Meditation Post">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="text-primary-accent text-xs fw-bold mb-2 d-block">PRACTICE</span>
+                            <h4 class="h5 mb-3">Breath vs Body Scan: Choosing a focus</h4>
+                            <p class="text-secondary text-sm mb-4">Understanding the core differences between breath-focused and somatic-scan techniques to steady your attention.</p>
+                            <div class="mt-auto">
+                                <a href="#"
+                                    class="btn btn-link text-primary-accent p-0 text-sm text-decoration-none">Read
+                                    Full Post <i class="bi bi-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="glass-card p-0 h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&q=80&w=800"
+                            class="blog-card-img w-100" alt="Office Mindfulness">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="text-primary-accent text-xs fw-bold mb-2 d-block">DAILY LIFE</span>
+                            <h4 class="h5 mb-3">5 Ways to Maintain Mindfulness at Your Desk</h4>
+                            <p class="text-secondary text-sm mb-4">Simple grounding exercises to release office stress and preserve clarity during a busy workday.</p>
+                            <div class="mt-auto">
+                                <a href="#"
+                                    class="btn btn-link text-primary-accent p-0 text-sm text-decoration-none">Read
+                                    Full Post <i class="bi bi-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="glass-card p-0 h-100 d-flex flex-column">
+                        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=800"
+                            class="blog-card-img w-100" alt="Vegan Nutrition">
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="text-primary-accent text-xs fw-bold mb-2 d-block">NUTRITION</span>
+                            <h4 class="h5 mb-3">Sustenance for Silence: Plant-Based Eating</h4>
+                            <p class="text-secondary text-sm mb-4">How clean, organic meals support physical lightness and mental clarity during long sitting sessions.</p>
+                            <div class="mt-auto">
+                                <a href="#"
+                                    class="btn btn-link text-primary-accent p-0 text-sm text-decoration-none">Read
+                                    Full Post <i class="bi bi-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 pt-5 text-center">
+                <button class="btn btn-outline-custom btn-lg">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NewsLetter Section -->
+    <section class="py-5 bg-secondary-bg mb-5" data-reveal="slide-left">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="glass-card p-2">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
+                            class="img-fluid rounded-4 shadow-lg" alt="Quiet nature scene">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-6 fw-bold mb-4">Mindfulness Tips, <br> <span class="text-gradient">Delivered Weekly</span></h2>
+                    <p class="text-secondary mb-5">Join 10,000+ practitioners receiving our weekly newsletter on silent retreats, daily meditation tips, and upcoming schedules.</p>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control bg-transparent border-color text-white shadow-none p-3"
+                            placeholder="Your email address">
+                        <button class="btn btn-primary-custom px-4">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Write for Us Section -->
+    <section class="py-5" data-reveal="slide-right">
+        <div class="container py-5">
+            <div class="glass-card p-5 overflow-hidden">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <h2 class="display-5 mb-4">Join our <span class="text-gradient">Sangha</span></h2>
+                        <p class="text-secondary lead mb-5">Are you a meditation teacher, mindfulness writer, or yoga instructor? Share your insights and guide practitioners worldwide.</p>
+                        <a href="contact.html" class="btn btn-outline-custom btn-lg">Become a Contributor</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
+                            class="img-fluid rounded-4 shadow-lg" alt="Community Sangha Meditation">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retreat Readings Showcase -->
+    <section class="py-5 bg-secondary-bg border-top border-color" data-reveal="fade-up">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4">
+                    <span class="badge bg-primary-accent text-dark mb-3 px-3 py-2 text-xs uppercase letter-spacing-1" style="font-weight: 500;">Curated Readings</span>
+                    <h2 class="display-6 fw-bold mb-4">The StillMind <br><span class="text-gradient">Retreat Library</span></h2>
+                    <p class="text-secondary mb-4">Before starting your silent journey, our teachers recommend these foundational books to prepare your mind and heart.</p>
+                    <a href="#" class="btn btn-outline-custom">View Full Bibliography</a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <!-- Book 1 -->
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 d-flex gap-4 align-items-start border border-color h-100">
+                                <div class="bg-primary-bg p-1 rounded-2 border border-color flex-shrink-0" style="width: 75px; height: 105px;">
+                                    <div class="w-100 h-100 rounded d-flex align-items-center justify-content-center text-primary-accent" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color);">
+                                        <i class="bi bi-book fs-3"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="h6 text-white mb-1">Zen Mind, Beginner's Mind</h4>
+                                    <p class="text-secondary small mb-2" style="font-size: 0.8rem;">By Shunryu Suzuki</p>
+                                    <p class="text-secondary text-xs mb-0" style="font-size: 0.75rem; line-height: 1.4;">A classic guide to Zen practice, focusing on posture, breathing, and attitude.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 2 -->
+                        <div class="col-sm-6">
+                            <div class="glass-card p-4 d-flex gap-4 align-items-start border border-color h-100">
+                                <div class="bg-primary-bg p-1 rounded-2 border border-color flex-shrink-0" style="width: 75px; height: 105px;">
+                                    <div class="w-100 h-100 rounded d-flex align-items-center justify-content-center text-primary-accent" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color);">
+                                        <i class="bi bi-book fs-3"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="h6 text-white mb-1">Mindfulness in Plain English</h4>
+                                    <p class="text-secondary small mb-2" style="font-size: 0.8rem;">By Henepola Gunaratana</p>
+                                    <p class="text-secondary text-xs mb-0" style="font-size: 0.75rem; line-height: 1.4;">One of the most clear, step-by-step guides to Vipassana meditation practice.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5 border-top border-color">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="StillMind Logo" height="35" class="me-2">
+                    </a>
+                    <p class="text-secondary">A premium sanctuary for silence, meditation, and deep mental rejuvenation.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4 social-links">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Explore</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="teachers.html" class="text-decoration-none text-secondary">Our Guides</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">The Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Main Links</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">About</a></li>
+                        <li class="mb-2"><a href="teachers.html" class="text-decoration-none text-secondary">Teachers</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Stay Updated</h5>
+                    <div class="glass-card p-2 d-flex">
+                        <input type="email" class="form-control bg-transparent border-0 text-white shadow-none"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary-custom ms-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-5 text-secondary border-top border-color">
+                <p>&copy; 2026 StillMind Retreats. All rights reserved. Built with Premium Zen Aesthetic.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
