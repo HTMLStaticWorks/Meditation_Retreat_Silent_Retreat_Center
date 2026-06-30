@@ -22,9 +22,9 @@
         }
 
         .top-controls {
-            position: fixed;
+            position: absolute;
             top: 25px;
-            right: 25px;
+            right: 12px;
             z-index: 9999;
             display: flex;
             align-items: center;
@@ -79,13 +79,15 @@
 <body class="bg-primary-bg">
 
     <div class="container-fluid p-0">
-        <div class="top-controls">
-            <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
-                <i class="bi bi-moon-stars"></i>
-            </button>
-            <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
-                RTL
-            </button>
+        <div class="container position-relative">
+            <div class="top-controls">
+                <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                    RTL
+                </button>
+            </div>
         </div>
         <div class="row g-0 auth-container">
 

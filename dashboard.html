@@ -27,6 +27,11 @@
                 min-height: 48px;
             }
 
+            #campaigns-section .row > div {
+                display: flex;
+                flex-direction: column;
+            }
+
             #campaigns-section .campaign-stage-card {
                 display: flex;
                 flex-direction: column;
@@ -84,6 +89,18 @@
             min-height: auto !important;
             width: auto !important;
         }
+
+        @media (max-width: 1024px) {
+            #sidebar-toggle {
+                display: inline-flex !important;
+            }
+            #close-sidebar {
+                display: inline-flex !important;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+            }
+        }
     </style>
 </head>
 
@@ -91,9 +108,14 @@
 
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
-        <a href="index.html" class="mb-5 d-flex align-items-center text-decoration-none">
-            <img src="assets/images/logo.svg" alt="Logo" height="35">
-        </a>
+        <div class="d-flex justify-content-between align-items-center mb-5 w-100">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="assets/images/logo.svg" alt="Logo" height="35">
+            </a>
+            <button id="close-sidebar" class="btn btn-link text-white p-0 border-0 shadow-none" style="display: none;">
+                <i class="bi bi-x-lg" style="font-size: 1.5rem;"></i>
+            </button>
+        </div>
 
         <nav class="sidebar-nav">
             <a href="#" class="sidebar-link active" onclick="showSection('overview')">
@@ -351,7 +373,7 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-12">
                     <div class="dashboard-card">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3 mb-4">
                             <h4 class="h5 mb-0">Meditation Streak & Consistency</h4>
                             <span class="badge status-active p-2">Active Streak: 12 Days</span>
                         </div>
@@ -409,7 +431,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="dashboard-card text-center integration-app-card">
-                        <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
+                        <div class="bg-white rounded-circle p-3 d-flex mx-auto mb-4" style="width: 70px; height: 70px; align-items: center; justify-content: center;">
                             <i class="bi bi-file-earmark-pdf text-danger fs-1"></i>
                         </div>
                         <h3 class="h5 mb-3 integration-app-title">Retreat Checklist</h3>
@@ -419,7 +441,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="dashboard-card text-center integration-app-card">
-                        <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
+                        <div class="bg-white rounded-circle p-3 d-flex mx-auto mb-4" style="width: 70px; height: 70px; align-items: center; justify-content: center;">
                             <i class="bi bi-music-note-beamed text-success fs-1"></i>
                         </div>
                         <h3 class="h5 mb-3 integration-app-title">Pre-Retreat Sit Guide</h3>
@@ -429,7 +451,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="dashboard-card text-center integration-app-card">
-                        <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center;">
+                        <div class="bg-white rounded-circle p-3 d-flex mx-auto mb-4" style="width: 70px; height: 70px; align-items: center; justify-content: center;">
                             <i class="bi bi-book text-warning fs-1"></i>
                         </div>
                         <h3 class="h5 mb-3 integration-app-title">Noble Silence Guide</h3>
@@ -510,7 +532,7 @@
                                         class="form-control bg-transparent border-color text-white shadow-none"
                                         value="Intermediate (1-3 years)">
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 text-center">
                                     <button class="btn btn-primary-custom px-5">Save Changes</button>
                                 </div>
                             </div>

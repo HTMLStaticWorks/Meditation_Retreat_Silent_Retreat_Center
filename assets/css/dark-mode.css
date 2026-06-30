@@ -19,12 +19,13 @@ body.light-theme .navbar-custom {
 }
 
 body.light-theme .nav-link {
-    color: #2A2A2A !important;
+    color: var(--text-secondary) !important;
 }
 
 body.light-theme .nav-link:hover,
 body.light-theme .nav-link.active {
     color: var(--primary-accent) !important;
+    font-weight: 600;
 }
 
 body.light-theme .navbar-brand .text-white {
@@ -182,4 +183,11 @@ body.light-theme .btn-outline-custom {
 
 body.light-theme .btn-outline-custom:hover {
     background: #F2EEE8;
+    border-color: var(--primary-accent) !important;
+    color: var(--primary-accent) !important;
+}
+
+body.light-theme .text-primary-accent:hover {
+    color: #1a332c !important;
+    text-decoration: underline !important;
 }

@@ -22,9 +22,9 @@
         }
 
         .top-controls {
-            position: fixed;
+            position: absolute;
             top: 25px;
-            right: 25px;
+            right: 12px;
             z-index: 9999;
             display: flex;
             align-items: center;
@@ -73,13 +73,15 @@
 <body class="bg-primary-bg">
 
     <div class="container-fluid p-0">
-        <div class="top-controls">
-            <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
-                <i class="bi bi-moon-stars"></i>
-            </button>
-            <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
-                RTL
-            </button>
+        <div class="container position-relative">
+            <div class="top-controls">
+                <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                    RTL
+                </button>
+            </div>
         </div>
 
         <div class="row g-0 auth-container">
@@ -150,10 +152,13 @@
                                 </div>
                             </div>
 
-                            <div class="mb-4">
-                                <p class="text-secondary text-xs text-center signup-terms">
-                                    By signing up, you agree to our <a href="#" class="text-primary-accent text-decoration-none">Terms of Service</a> and <a href="#" class="text-primary-accent text-decoration-none">Privacy Policy</a>.
-                                </p>
+                            <div class="mb-4 d-flex justify-content-center">
+                                <div class="form-check text-start">
+                                    <input type="checkbox" class="form-check-input bg-transparent border-color me-2" id="agreeTerms" required>
+                                    <label class="form-check-label text-secondary text-xs signup-terms" for="agreeTerms">
+                                        I agree to the <a href="#" class="text-primary-accent text-decoration-none">Terms of Service</a> and <a href="#" class="text-primary-accent text-decoration-none">Privacy Policy</a>.
+                                    </label>
+                                </div>
                             </div>
 
                             <a href="dashboard.html" class="btn btn-primary-custom w-100 py-3 mb-4 text-center d-block text-decoration-none signup-create-btn">Create Account</a>

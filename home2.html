@@ -118,11 +118,17 @@
                 <i class="bi bi-list text-white fs-2"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Mobile Exit Button -->
+                <div class="d-xl-none w-100 d-flex justify-content-end mb-4">
+                    <button class="btn btn-outline-custom nav-toggle-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Close menu">
+                        <i class="bi bi-x-lg text-white fs-2"></i>
+                    </button>
+                </div>
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="home2.html">Home 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -194,7 +200,7 @@
                 <div class="col-lg-6">
                     <div class="position-relative float-animation ps-lg-4">
                         <div class="position-absolute hero-glow" style="width: 300px; height: 300px; top: 10%; right: 10%; opacity: 0.2; filter: blur(80px);"></div>
-                        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=1200"
+                        <img src="https://aerialbvi.com/wp-content/uploads/2024/02/Silent-retreats-at-Aerial-BVI-1024x683.jpg"
                              alt="Misty Forest Canopy" class="img-fluid rounded-5 shadow-lg border border-color" style="max-height: 480px; width: 100%; object-fit: cover;">
                         
                         <!-- Floating badge overlay -->
@@ -349,17 +355,8 @@
                 <div class="col-lg-6">
                     <div class="position-relative float-animation ps-lg-4">
                         <div class="position-absolute hero-glow" style="width: 250px; height: 250px; bottom: 10%; right: 10%; opacity: 0.15; filter: blur(60px);"></div>
-                        <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&q=80&w=800" 
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTH0E9YbbzUgYn3OwU_PsKFcrLCuL1Xnv54DlIDV1TlXwttCSDcaCRLSyG&s=10" 
                              alt="Sanctuary Study & Library" class="img-fluid rounded-5 shadow-lg border border-color" style="max-height: 400px; width: 100%; object-fit: cover;">
-                        <div class="position-absolute glass-card p-3 rounded-4 shadow-lg border border-color text-start" style="top: 25px; left: -15px; max-width: 240px; z-index: 2;">
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-book text-primary-accent fs-4"></i>
-                                <div>
-                                    <h6 class="mb-0 text-white text-xs">Sanctuary Library</h6>
-                                    <p class="text-secondary text-2xs mb-0">1,000+ volumes on mindfulness</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -444,12 +441,17 @@
     <!-- Section 5: Experience the Rhythm -->
     <section class="py-5 bg-secondary-bg" data-reveal="slide-right">
         <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h2 class="display-5 mb-4">Experience the <span class="text-gradient">Rhythm</span></h2>
-                    <p class="text-secondary mb-5">Get a glimpse of a typical silent retreat day before you arrive. Every hour is designed to foster presence.</p>
-
-                    <div class="glass-card p-4 mb-4">
+            <!-- Header Row -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 mb-3">Experience the <span class="text-gradient">Rhythm</span></h2>
+                    <p class="text-secondary max-w-600">Get a glimpse of a typical silent retreat day before you arrive. Every hour is designed to foster presence.</p>
+                </div>
+            </div>
+            <!-- Cards Row -->
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6 mb-4 mb-lg-0 d-flex flex-column">
+                    <div class="glass-card p-4 flex-grow-1">
                         <h5 class="mb-3">Typical Daily Sessions</h5>
                         <div class="d-flex align-items-start mb-3">
                             <div class="badge bg-primary-accent rounded-circle p-2 me-3">
@@ -488,16 +490,17 @@
                             </div>
                         </div>
                     </div>
-
-                    <a href="dashboard.html" class="btn btn-primary-custom btn-lg">Start Free Demo</a>
+                    <div class="mt-4">
+                        <a href="dashboard.html" class="btn btn-primary-custom btn-lg">Start Free Demo</a>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="glass-card p-5">
-                        <div class="text-center mb-4">
-                            <div class="demo-qr-container p-4 bg-white rounded-4 d-inline-block">
+                <div class="col-lg-6 d-flex">
+                    <div class="glass-card p-5 w-100 d-flex flex-column justify-content-between">
+                        <div class="text-center mb-4 flex-grow-1 d-flex flex-column justify-content-center">
+                            <div class="demo-qr-container p-4 bg-white rounded-4 d-inline-block mx-auto" style="max-width: fit-content;">
                                 <div class="qr-placeholder text-center">
                                     <i class="bi bi-peace display-1 text-dark mb-3 d-block"></i>
-                                    <p class="text-muted small">Walk with presence</p>
+                                    <p class="text-muted small mb-0">Walk with presence</p>
                                 </div>
                             </div>
                         </div>
@@ -528,7 +531,7 @@
                 <h2 class="display-5 mb-3">Retreat <span class="text-gradient">Packages</span></h2>
                 <p class="text-secondary max-w-600 mx-auto">All packages include organic plant-based meals, lodging, and full teacher guidance.</p>
             </div>
-            <div class="row g-4 align-items-center">
+            <div class="row g-4 align-items-stretch">
                 <div class="col-lg-4">
                     <div class="glass-card p-5 h-100 d-flex flex-column">
                         <div style="height: 40px;" class="mb-4"></div> <!-- Spacer -->
@@ -553,7 +556,7 @@
                     <div
                         class="glass-card p-5 h-100 border-primary-accent position-relative d-flex flex-column shadow-lg">
                         <div class="text-center mb-4" style="height: 40px;">
-                            <div class="badge bg-primary-accent text-white px-3 py-2">MOST POPULAR</div>
+                            <div class="badge bg-primary-accent px-3 py-2" style="color: #ffffff !important;">MOST POPULAR</div>
                         </div>
                         <h3 class="h4 mb-3 text-white">7-Day Deep Retreat</h3>
                         <div class="mb-4">
@@ -614,7 +617,7 @@
                     <div class="d-flex gap-3 fs-4 mt-4 social-links">
                         <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
                         <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter"></i></a>
                         <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
                     </div>

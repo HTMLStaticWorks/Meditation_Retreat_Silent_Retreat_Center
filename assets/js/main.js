@@ -2,9 +2,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // Sidebar Toggle
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebar-toggle');
+    const closeSidebar = document.getElementById('close-sidebar');
+    
     if (sidebarToggle) {
         sidebarToggle.addEventListener('click', () => {
             sidebar.classList.toggle('active');
+        });
+    }
+    
+    if (closeSidebar) {
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('active');
         });
     }
 
@@ -232,8 +240,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Dynamic title update disabled to keep static 'Dashboard' header
 
-        // Close sidebar on mobile after selection
-        if (window.innerWidth < 992 && sidebar.classList.contains('active')) {
+        // Close sidebar on mobile/tablet after selection
+        if (window.innerWidth <= 1024 && sidebar.classList.contains('active')) {
             sidebar.classList.remove('active');
         }
     };
