@@ -25,12 +25,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     background-color: var(--primary-bg);
     color: var(--text-primary);
-    overflow-x: hidden;
     line-height: 1.6;
 }
 
@@ -197,10 +201,45 @@ p, .lead, li, td, th {
 }
 
 @media (max-width: 1199.98px) {
+    body {
+        padding-top: 72px !important;
+    }
+    
+    body.home2-page {
+        padding-top: 86px !important;
+    }
+    
+    body:has(.sidebar),
+    body:has(.top-controls) {
+        padding-top: 0 !important;
+    }
+
+    .navbar-custom {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        z-index: 1080 !important;
+    }
+
+    .navbar-custom .container {
+        position: relative;
+    }
+
     .navbar-custom .navbar-collapse {
-        margin-top: 12px;
-        padding-top: 12px;
-        border-top: 1px solid var(--border-color);
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        width: 100% !important;
+        z-index: 1100;
+        margin-top: 0;
+        padding: 24px;
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        background: rgba(24, 35, 32, 0.98);
+        backdrop-filter: blur(15px);
     }
 
     .navbar-custom .navbar-nav {
@@ -221,26 +260,6 @@ p, .lead, li, td, th {
 
     .navbar-custom .navbar-collapse > .d-flex.align-items-center.gap-3 > .d-flex.gap-2 {
         margin-left: 0 !important;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1199.98px) {
-    .navbar-custom .container {
-        position: relative;
-    }
-
-    .navbar-custom .navbar-collapse {
-        position: absolute;
-        top: calc(100% + 8px);
-        right: 0;
-        left: auto;
-        width: min(360px, calc(100vw - 2rem));
-        z-index: 1100;
-        margin-top: 0;
-        padding: 14px;
-        border: 1px solid var(--border-color);
-        border-radius: 14px;
-        background: rgba(11, 16, 32, 0.98);
     }
 }
 
@@ -851,9 +870,79 @@ body:not(.light-theme) .badge.bg-primary-accent.text-dark {
 
 @media (max-width: 991.98px) {
     .collage-container {
-        height: 380px;
+        position: relative;
         margin-top: 3rem;
     }
+
+    /* Tablet view: 576px to 991px */
+    @media (min-width: 576px) {
+        .collage-container {
+            height: 400px;
+        }
+        .collage-img-main {
+            position: absolute;
+            width: 80%;
+            height: 90%;
+            left: 10%;
+            top: 0;
+        }
+        .collage-badge-1 {
+            position: absolute;
+            top: 15%;
+            right: 5%;
+            left: auto;
+        }
+        .collage-badge-2 {
+            position: absolute;
+            bottom: 15%;
+            left: 5%;
+            right: auto;
+        }
+    }
+
+    /* Mobile view: < 576px */
+    @media (max-width: 575.98px) {
+        .collage-container {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+        }
+        .collage-img-main {
+            position: relative;
+            width: 100%;
+            height: auto;
+            left: 0;
+            top: 0;
+        }
+        .collage-badge-1,
+        .collage-badge-2 {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            top: auto;
+            bottom: auto;
+            left: auto;
+            right: auto;
+            transform: none !important;
+        }
+        .hero-section .btn {
+            width: 100%;
+            max-width: 280px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .topic-tag {
+            width: 100%;
+            max-width: 280px;
+        }
+        .topic-tag .badge {
+            margin-inline-start: auto !important;
+        }
+    }
+
     .showcase-floating-card-left,
     .showcase-floating-card-right {
         position: static;
@@ -861,5 +950,97 @@ body:not(.light-theme) .badge.bg-primary-accent.text-dark {
         margin-top: 1rem;
         transform: none !important;
     }
+
+    .about-image-wrapper {
+        max-width: 480px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .about-floating-card {
+        position: static !important;
+        max-width: 100% !important;
+        margin-top: 1rem !important;
+        transform: none !important;
+    }
 }
+
+/* Global contrast fix for primary accent (green) badges and tags across all pages and themes */
+body .bg-primary-accent,
+body.light-theme .bg-primary-accent,
+body .bg-primary-accent *,
+body.light-theme .bg-primary-accent * {
+    color: #ffffff !important;
+}
+
+/* Fix featured guide section image alignment/height on desktop/web view */
+@media (min-width: 992px) {
+    .blog-featured-row {
+        align-items: stretch !important;
+    }
+    .blog-featured-img-col {
+        display: flex !important;
+    }
+    .blog-featured-img-col img {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+}
+
+/* Global RTL Directional Spacing overrides for LTR Bootstrap fallback */
+html[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
+
+html[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
+
+html[dir="rtl"] .pe-1 { padding-left: 0.25rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-2 { padding-left: 0.5rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+
+html[dir="rtl"] .ps-1 { padding-right: 0.25rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-2 { padding-right: 0.5rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-5 { padding-right: 3rem !important; padding-left: 0 !important; }
+
+/* Specific feature-icon & list spacing adjustments for Home Page 2 in RTL */
+html[dir="rtl"] .feature-icon {
+    margin-left: 1.5rem !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] section.bg-secondary-bg ul.list-unstyled li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+html[dir="rtl"] section:not(.bg-secondary-bg) ul.list-unstyled li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] ul.list-unstyled li i {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] .badge.bg-primary-accent.rounded-circle {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+
+
+
+
 

@@ -1,0 +1,62 @@
+/* RTL Mode Overrides & Utility Fixes */
+
+html[dir="rtl"] {
+    text-align: right;
+}
+
+/* Margin-right -> Margin-left overrides for LTR Bootstrap utilities */
+html[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
+
+/* Margin-left -> Margin-right overrides */
+html[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
+
+/* Padding-right -> Padding-left overrides */
+html[dir="rtl"] .pe-1 { padding-left: 0.25rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-2 { padding-left: 0.5rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+
+/* Padding-left -> Padding-right overrides */
+html[dir="rtl"] .ps-1 { padding-right: 0.25rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-2 { padding-right: 0.5rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-5 { padding-right: 3rem !important; padding-left: 0 !important; }
+
+/* Specific feature-icon & list spacing adjustments for Home Page 2 in RTL */
+html[dir="rtl"] .feature-icon {
+    margin-left: 1.5rem !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] section.bg-secondary-bg ul.list-unstyled li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+html[dir="rtl"] section:not(.bg-secondary-bg) ul.list-unstyled li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] ul.list-unstyled li i {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+html[dir="rtl"] .badge.bg-primary-accent.rounded-circle {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
