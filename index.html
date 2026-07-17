@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/images/logo.svg" alt="StillMind Logo" class="me-2" style="height: 40px;">
+                <img src="assets/images/logo.svg" alt="StillMind Logo" height="35" class="me-2">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i class="bi bi-list text-white fs-2"></i>
@@ -45,22 +45,24 @@
                     <li class="nav-item"><a class="nav-link" href="teachers.html">Teachers</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <a href="dashboard.html" class="btn btn-primary-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn"
-                        title="Participant Dashboard">
-                        <i class="bi bi-grid-fill"></i>
-                    </a>
-                    <a href="login.html" class="btn btn-outline-custom btn-sm d-flex align-items-center" title="Login">
-                        Login
-                    </a>
                     <div class="d-flex gap-2">
                         <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
-                            <i class="bi bi-moon-stars"></i>
+                            <i class="bi bi-brightness-high"></i>
                         </button>
                         <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
                             RTL
                         </button>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="login.html" class="btn btn-outline-custom btn-sm d-flex align-items-center" title="Login">
+                            Login
+                        </a>
+                        <a href="register.html" class="btn btn-primary-custom btn-sm d-flex align-items-center" title="Sign Up">
+                            Sign Up
+                        </a>
                     </div>
                 </div>
             </div>
@@ -136,7 +138,11 @@
                              class="w-100" style="height: 200px; object-fit: cover;" alt="Silent Retreats">
                         <div class="p-5">
                             <div class="mb-4 fs-1 text-primary-accent border-bottom pb-3 text-center">01</div>
-                            <i class="bi bi-hourglass-split fs-1 text-gradient mb-4 d-block text-center"></i>
+                            <div class="text-center mb-4">
+                                <div class="bg-primary-bg p-3 rounded-circle d-inline-block border border-color shadow">
+                                    <i class="bi bi-hourglass-split text-primary-accent fs-3"></i>
+                                </div>
+                            </div>
                             <h3 class="h4 mb-3 text-center">Silent Retreats</h3>
                             <p class="text-secondary mb-0">Unplug from daily noise. Experience structured noble silence with guided group and solo sessions.</p>
                         </div>
@@ -148,7 +154,11 @@
                              class="w-100" style="height: 200px; object-fit: cover;" alt="Mindfulness & Yoga">
                         <div class="p-5">
                             <div class="mb-4 fs-1 text-primary-accent border-bottom pb-3 text-center">02</div>
-                            <i class="bi bi-flower1 fs-1 text-gradient mb-4 d-block text-center"></i>
+                            <div class="text-center mb-4">
+                                <div class="bg-primary-bg p-3 rounded-circle d-inline-block border border-color shadow">
+                                    <i class="bi bi-flower1 text-primary-accent fs-3"></i>
+                                </div>
+                            </div>
                             <h3 class="h4 mb-3 text-center">Mindfulness & Yoga</h3>
                             <p class="text-secondary mb-0">Align mind and body. Learn secular mindfulness tools combined with daily gentle movement.</p>
                         </div>
@@ -156,11 +166,15 @@
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card p-0 overflow-hidden h-100">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS2m7nrw24aoiVaXpiVaqlwkeq6AZJfRReYUCq0exXtWNh_mT2RWpMeRs&s=10" 
+                        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&q=80&w=600" 
                              class="w-100" style="height: 200px; object-fit: cover;" alt="Nature Immersions">
                         <div class="p-5">
                             <div class="mb-4 fs-1 text-primary-accent border-bottom pb-3 text-center">03</div>
-                            <i class="bi bi-tree fs-1 text-gradient mb-4 d-block text-center"></i>
+                            <div class="text-center mb-4">
+                                <div class="bg-primary-bg p-3 rounded-circle d-inline-block border border-color shadow">
+                                    <i class="bi bi-tree text-primary-accent fs-3"></i>
+                                </div>
+                            </div>
                             <h3 class="h4 mb-3 text-center">Nature Immersions</h3>
                             <p class="text-secondary mb-0">Restore in natural solitude. Stay in our forest cabins and participate in guided forest bathing.</p>
                         </div>
@@ -173,10 +187,12 @@
     <!-- Retreat Experience Section -->
     <section class="py-5 bg-secondary-bg" data-reveal="slide-right">
         <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 mb-3">The Gift of <span class="text-gradient">Noble Silence</span></h2>
+                <p class="text-secondary max-w-600 mx-auto">Step away from daily demands and immerse yourself in an environment dedicated to restoration and self-discovery.</p>
+            </div>
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0">
-                    <h2 class="display-5 mb-4 text-center">The Gift of <span class="text-gradient">Noble Silence</span></h2>
-                    <p class="text-secondary mb-5">Step away from daily demands and immerse yourself in an environment dedicated to restoration and self-discovery.</p>
                     <ul class="list-unstyled">
                         <li class="mb-4 d-flex align-items-start">
                             <i class="bi bi-peace text-primary-accent me-3 fs-4"></i>
@@ -207,7 +223,7 @@
                         </div>
                         <div class="col-6">
                             <div class="glass-card p-2">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPzBrVpfAQZnCHvwy8XDlSsS1wR4BWlxfA66L02zWekjH8vJFFlMzd2lg&s=10"
+                                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600"
                                     class="img-fluid rounded-4 premium-brand-img" alt="Forest walkway">
                             </div>
                         </div>
@@ -220,31 +236,27 @@
     <!-- Legacy / Stats Section -->
     <section class="py-5" data-reveal="scale-up">
         <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-4">
-                    <h2 class="display-5 mb-4">A Sanctuary with a <span class="text-gradient">Trusted Legacy</span></h2>
-                    <p class="text-secondary lead">Over the past decade, we have hosted thousands of retreatants seeking rest, restoration, and mindfulness guidance.</p>
+            <div class="text-center mb-5">
+                <h2 class="display-5 mb-3">A Sanctuary with a <span class="text-gradient">Trusted Legacy</span></h2>
+                <p class="text-secondary max-w-600 mx-auto">Over the past decade, we have hosted thousands of retreatants seeking rest, restoration, and mindfulness guidance.</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
+                        <h3 class="display-5 fw-bold text-gradient mb-2">15k+</h3>
+                        <p class="text-secondary small mb-0 font-monospace">RETREATANTS HOSTED</p>
+                    </div>
                 </div>
-                <div class="col-lg-8">
-                    <div class="row g-4 text-center">
-                        <div class="col-md-4">
-                            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
-                                <h3 class="display-5 fw-bold text-gradient mb-2">15k+</h3>
-                                <p class="text-secondary small mb-0 font-monospace">RETREATANTS HOSTED</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
-                                <h3 class="display-5 fw-bold text-gradient mb-2">120+</h3>
-                                <p class="text-secondary small mb-0 font-monospace">ANNUAL RETREATS</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
-                                <h3 class="display-5 fw-bold text-gradient mb-2">98%</h3>
-                                <p class="text-secondary small mb-0 font-monospace">RESTORED CLARITY</p>
-                            </div>
-                        </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
+                        <h3 class="display-5 fw-bold text-gradient mb-2">120+</h3>
+                        <p class="text-secondary small mb-0 font-monospace">ANNUAL RETREATS</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-4 h-100 d-flex flex-column justify-content-center">
+                        <h3 class="display-5 fw-bold text-gradient mb-2">98%</h3>
+                        <p class="text-secondary small mb-0 font-monospace">RESTORED CLARITY</p>
                     </div>
                 </div>
             </div>

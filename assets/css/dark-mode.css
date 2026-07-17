@@ -22,10 +22,13 @@ body.light-theme .nav-link {
     color: var(--text-secondary) !important;
 }
 
-body.light-theme .nav-link:hover,
+body.light-theme .nav-link:hover {
+    color: var(--primary-accent) !important;
+}
+
 body.light-theme .nav-link.active {
     color: var(--primary-accent) !important;
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 body.light-theme .navbar-brand .text-white {
@@ -43,6 +46,10 @@ body.light-theme .text-secondary {
 
 body.light-theme .text-white {
     color: #2A2A2A !important;
+}
+
+body.light-theme .badge.bg-primary-accent.text-white {
+    color: #ffffff !important;
 }
 
 body.light-theme .display-3,
