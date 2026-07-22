@@ -10,9 +10,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        body.about-page .about-media {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+            background: var(--secondary-bg);
+        }
+
+        body.about-page .about-media--compact {
+            height: 180px;
+        }
+
+        body.about-page .about-media--standard {
+            height: 300px;
+        }
+    </style>
 </head>
 
-<body>
+<body class="about-page">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
@@ -78,7 +97,7 @@
                 <!-- Section 1: Our Serene Setting -->
                 <div class="col-lg-6">
                     <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
-                        <img src="https://media.istockphoto.com/id/474267374/photo/reflections-on-a-lake.jpg?s=612x612&w=0&k=20&c=cqzsN4ldAbOywiM3Bf2lDf0wAsSUgzUHs_1Q-0ncIl8=" class="w-100" style="height: 180px; object-fit: cover;" alt="Our Serene Setting">
+                        <img src="https://media.istockphoto.com/id/474267374/photo/reflections-on-a-lake.jpg?s=612x612&w=0&k=20&c=cqzsN4ldAbOywiM3Bf2lDf0wAsSUgzUHs_1Q-0ncIl8=" class="about-media about-media--compact" alt="Our Serene Setting">
                         <div class="p-4 d-flex gap-3 align-items-start flex-grow-1">
                             <div class="bg-primary-bg p-3 rounded-3 border border-color flex-shrink-0">
                                 <i class="bi bi-tree text-primary-accent fs-2"></i>
@@ -94,7 +113,7 @@
                 <!-- Section 2: The Main Meditation Hall -->
                 <div class="col-lg-6">
                     <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=600" class="w-100" style="height: 180px; object-fit: cover;" alt="Main Meditation Hall">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=600" class="about-media about-media--compact" alt="Main Meditation Hall">
                         <div class="p-4 d-flex gap-3 align-items-start flex-grow-1">
                             <div class="bg-primary-bg p-3 rounded-3 border border-color flex-shrink-0">
                                 <i class="bi bi-building text-primary-accent fs-2"></i>
@@ -110,7 +129,7 @@
                 <!-- Section 3: Comfortable Lodging -->
                 <div class="col-lg-6">
                     <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=600" class="w-100" style="height: 180px; object-fit: cover;" alt="Comfortable Lodging">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&q=80&w=600" class="about-media about-media--compact" alt="Comfortable Lodging">
                         <div class="p-4 d-flex gap-3 align-items-start flex-grow-1">
                             <div class="bg-primary-bg p-3 rounded-3 border border-color flex-shrink-0">
                                 <i class="bi bi-house text-primary-accent fs-2"></i>
@@ -126,7 +145,7 @@
                 <!-- Section 4: Organic Nutrition -->
                 <div class="col-lg-6">
                     <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=600" class="w-100" style="height: 180px; object-fit: cover;" alt="Organic Nutrition">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=600" class="about-media about-media--compact" alt="Organic Nutrition">
                         <div class="p-4 d-flex gap-3 align-items-start flex-grow-1">
                             <div class="bg-primary-bg p-3 rounded-3 border border-color flex-shrink-0">
                                 <i class="bi bi-flower1 text-primary-accent fs-2"></i>
@@ -157,7 +176,7 @@
                     <div class="about-image-wrapper position-relative">
                         <div class="glass-card p-2">
                             <img src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?auto=format&fit=crop&q=80&w=600"
-                                class="img-fluid rounded-4" alt="Quiet contemplation">
+                                class="about-media about-media--standard" alt="Quiet contemplation">
                         </div>
                         <div class="position-absolute glass-card p-3 shadow-lg float-animation about-floating-card" style="bottom: -20px; right: -20px; max-width: 220px; border: 1px solid var(--border-color);">
                             <p class="mb-0 fw-semibold text-white small"><i class="bi bi-calendar-check text-primary-accent me-2"></i>Year-Round Retreats</p>
@@ -185,7 +204,7 @@
                     <div class="about-image-wrapper position-relative">
                         <div class="glass-card p-2">
                             <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=600"
-                                class="rounded-4 w-100" style="height: 300px; object-fit: cover;" alt="Green sanctuary">
+                                class="about-media about-media--standard" alt="Green sanctuary">
                         </div>
                         <div class="position-absolute glass-card p-3 shadow-lg float-animation about-floating-card" style="top: -20px; left: -20px; max-width: 220px; border: 1px solid var(--border-color);">
                             <p class="mb-0 fw-semibold text-white small"><i class="bi bi-sun text-primary-accent me-2"></i>100% Solar Powered</p>
@@ -211,7 +230,7 @@
                     <div class="about-image-wrapper position-relative">
                         <div class="glass-card p-2">
                             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
-                                class="img-fluid rounded-4" alt="Support team">
+                                class="about-media about-media--standard" alt="Support team">
                         </div>
                         <div class="position-absolute glass-card p-3 shadow-lg float-animation about-floating-card" style="bottom: -20px; right: -20px; max-width: 220px; border: 1px solid var(--border-color);">
                             <p class="mb-0 fw-semibold text-white small"><i class="bi bi-heart text-primary-accent me-2"></i>Mindful Community</p>
@@ -253,7 +272,7 @@
                         <div class="position-absolute hero-glow" style="bottom: -10%; right: -10%; width: 250px; height: 250px; opacity: 0.15; filter: blur(60px);"></div>
                         <div class="glass-card p-2 position-relative z-1">
                             <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&q=80&w=800"
-                                class="img-fluid rounded-4 shadow-lg" alt="Inner connection">
+                                class="about-media about-media--standard" alt="Inner connection">
                         </div>
                     </div>
                 </div>

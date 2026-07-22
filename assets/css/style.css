@@ -188,8 +188,13 @@ p, .lead, li, td, th {
 }
 
 .nav-link.active {
-    color: var(--primary-accent) !important;
-    font-weight: 600 !important;
+    color: #f4fbf8 !important;
+    font-weight: 700 !important;
+    padding: 0.45rem 1rem;
+    background: rgba(90, 148, 130, 0.28);
+    border: 1px solid rgba(137, 186, 169, 0.42);
+    border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18), inset 0 0 0 1px rgba(47, 93, 80, 0.12);
 }
 
 @media (min-width: 1200px) {

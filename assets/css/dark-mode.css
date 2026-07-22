@@ -27,8 +27,13 @@ body.light-theme .nav-link:hover {
 }
 
 body.light-theme .nav-link.active {
-    color: var(--primary-accent) !important;
-    font-weight: 600 !important;
+    color: #17352d !important;
+    font-weight: 700 !important;
+    padding: 0.45rem 1rem;
+    background: rgba(47, 93, 80, 0.16);
+    border: 1px solid rgba(47, 93, 80, 0.38);
+    border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(47, 93, 80, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.55);
 }
 
 body.light-theme .navbar-brand .text-white {
